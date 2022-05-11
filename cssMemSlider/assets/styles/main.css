@@ -1,3 +1,7 @@
+* {
+    transition: all 0.2s linear;
+}
+
 .wrapper {
     background-color: black;
     box-sizing: border-box;
@@ -19,17 +23,16 @@
 
 .slider-view {
     display: flex;
-    overflow: auto;
+    overflow: hidden;
     box-sizing: border-box;
-    border-radius: 1rem;
+    border-radius: 1rem 1rem 0 0;
     height: 85%;
     width: 100%;
 }
 
 .slider-tape {
     display: flex;
-    min-width: 401%;
-    justify-content: space-between;
+    min-width: 400%;
 }
 
 .slide {
@@ -38,6 +41,8 @@
     background-color: dimgray;
     display: flex;
     align-items: center;
+    order: 2;
+    transform: translateX(100%);
 }
 
 .slide img {
@@ -52,8 +57,7 @@
 }
 
 .sign-view {
-    align-items: center;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .sign-tape {
@@ -67,7 +71,9 @@
 }
 
 .sign {
-    width: 100%;
+    order: 2;
+    width: 25%;
+    transform: translateX(100%);
 }
 
 .control {
@@ -76,25 +82,7 @@
 }
 
 input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
-
-    border-radius: 50%;
-    width: 1rem;
-    height: 1rem;
-    border: 0.5rem solid blue;
-    transition: 0.2s all linear;
-    cursor: pointer;
-}
-
-input:checked {
-    background: yellowgreen;
-    border-width: 0.2rem;
-}
-
-input:hover {
-    border-color: rgb(124, 124, 255);
 }
 
 label {
@@ -104,6 +92,74 @@ label {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+.diod {
+    width: 1rem;
+    height: 1rem;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: yellowgreen;
+    border: 0.5rem solid blue;
+}
+
+label:hover .diod {
+    border-color: rgb(151, 151, 255);
+}
+
+#mem-selection1:checked~.conteiner #diod1 {
+    border-width: 0.1rem;
+}
+
+#mem-selection2:checked~.conteiner #diod2 {
+    border-width: 0.1rem;
+}
+
+#mem-selection3:checked~.conteiner #diod3 {
+    border-width: 0.1rem;
+}
+
+#mem-selection4:checked~.conteiner #diod4 {
+    border-width: 0.1rem;
+}
+
+#mem-selection1:checked~.conteiner #sign1 {
+    order: 1;
+    transform: none;
+}
+
+#mem-selection2:checked~.conteiner #sign2 {
+    order: 1;
+    transform: none;
+}
+
+#mem-selection3:checked~.conteiner #sign3 {
+    order: 1;
+    transform: none;
+}
+
+#mem-selection4:checked~.conteiner #sign4 {
+    order: 1;
+    transform: none;
+}
+#mem-selection1:checked~.conteiner #slide1 {
+    order: 1;
+    transform: none;
+}
+
+#mem-selection2:checked~.conteiner #slide2 {
+    order: 1;
+    transform: none;
+}
+
+#mem-selection3:checked~.conteiner #slide3 {
+    order: 1;
+    transform: none;
+}
+
+#mem-selection4:checked~.conteiner #slide4 {
+    order: 1;
+    transform: none;
 }
 
 @media (max-width: 1080px) {
