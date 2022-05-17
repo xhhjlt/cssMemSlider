@@ -87,8 +87,8 @@ input {
 
 label {
     display: flex;
-    width: 3rem;
-    height: 5rem;
+    width: 2rem;
+    height: 2rem;
     align-items: center;
     justify-content: center;
     cursor: pointer;
