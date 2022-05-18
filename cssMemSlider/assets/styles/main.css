@@ -1,0 +1,188 @@
+* {
+    transition: all 0.2s linear;
+}
+
+.wrapper {
+    background-color: black;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.conteiner {
+    background-color: dimgray;
+    width: 65%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: auto;
+    border-radius: 1rem;
+}
+
+.slider-view {
+    display: flex;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 1rem 1rem 0 0;
+    height: 85%;
+    width: 100%;
+}
+
+.slider-tape {
+    display: flex;
+    min-width: 400%;
+}
+
+.slide {
+    height: 100%;
+    width: 25%;
+    background-color: dimgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 2;
+    transform: translateX(100%);
+}
+
+.slide img {
+    display: block;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.panel {
+    display: flex;
+    gap: 1rem;
+}
+
+.sign-view {
+    overflow: hidden;
+}
+
+.sign-tape {
+    display: flex;
+    width: 400%;
+}
+
+.sign-tape p {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.sign {
+    order: 2;
+    width: 25%;
+    transform: translateX(100%);
+}
+
+.control {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    appearance: none;
+}
+
+label {
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.diod {
+    width: 1rem;
+    height: 1rem;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: yellowgreen;
+    border: 0.5rem solid blue;
+}
+
+label:hover .diod {
+    border-color: rgb(151, 151, 255);
+}
+
+label:active .diod {
+    border-color: blueviolet;
+}
+
+#mem-selection1:checked~.conteiner #diod1 {
+    border-width: 0.1rem;
+}
+
+#mem-selection2:checked~.conteiner #diod2 {
+    border-width: 0.1rem;
+}
+
+#mem-selection3:checked~.conteiner #diod3 {
+    border-width: 0.1rem;
+}
+
+#mem-selection4:checked~.conteiner #diod4 {
+    border-width: 0.1rem;
+}
+
+#mem-selection1:checked~.conteiner #sign1 {
+    order: 1;
+    transform: none;
+}
+
+#mem-selection2:checked~.conteiner #sign2 {
+    order: 1;
+    transform: none;
+}
+
+#mem-selection3:checked~.conteiner #sign3 {
+    order: 1;
+    transform: none;
+}
+
+#mem-selection4:checked~.conteiner #sign4 {
+    order: 1;
+    transform: none;
+}
+#mem-selection1:checked~.conteiner #slide1 {
+    order: 1;
+    transform: none;
+}
+
+#mem-selection2:checked~.conteiner #slide2 {
+    order: 1;
+    transform: none;
+}
+
+#mem-selection3:checked~.conteiner #slide3 {
+    order: 1;
+    transform: none;
+}
+
+#mem-selection4:checked~.conteiner #slide4 {
+    order: 1;
+    transform: none;
+}
+
+@media (max-width: 1080px) {
+    .conteiner {
+        width: 85%;
+    }
+}
+
+@media (max-width: 768px) {
+    .panel {
+        flex-direction: column-reverse;
+    }
+
+    .control {
+        align-self: center;
+    }
+
+    .conteiner {
+        width: 95%;
+    }
+}
